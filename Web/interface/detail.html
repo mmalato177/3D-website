@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>La Redoute | Detailed Product</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" type="icon" href="./src/icons/logo.ico">
+</head>
+
+<body>
+    <header>
+        <a href="./index.html">
+            <img class="logo" src="./src/icons/La-redoute-brand-logo.png" alt="Logo La Redoute">
+        </a>
+        
+        <div class="nav">
+            <div class="bar">
+                <img class="icon-25" src="./src/icons/searchicon.png">
+                <input class="text-dark-grey" type="search" placeholder="O que procura?">
+            </div>
+            <div class="menu-container">
+                <a class="button-red-active" style="margin-left: 0px;" href="#">
+                    <img class="icon-20" src="./src/icons/menuIcon.png">
+                    <div class="text-white">Menu</div>
+                </a>
+                <a class="button-red" href="#">
+                    <div class="text-white">Ofertas</div>
+                </a>
+                <a class="button-red" href="#">
+                    <div class="text-white">Textil-lar</div>
+                </a>
+                <a class="button-red" href="#">
+                    <div class="text-white">Mobiliário</div>
+                </a>
+                <a class="button-red" href="#">
+                    <div class="text-white">Outlet</div>
+                </a>
+                <a class="button-red" href="#">
+                    <div class="text-white">Moda &amp; Calçado</div>
+                </a>
+                <a class="button-red" style="margin-right: 0px;" href="#">
+                    <div class="text-white">Business</div>
+                </a>
+            </div>
+        </div>
+        <div class="icon-container">
+            <div class="icon-user">
+                <img class="icon-30"src="./src/icons/userIcon.png" alt="Icon Utilizador">
+                <div class="text-dark-grey" style="margin: auto auto;">Entrar/Registar</div>
+            </div>
+            <div class="icon-container-bellow">
+                <div class="icon-circle">
+                    <img class="icon-cart" src="./src/icons/shopping-cart.512x465.png" alt="Icon Carrinho Compras">
+                </div>
+                <div class="icon-circle">
+                    <img class="icon-40" src="./src/icons/favIconfull.png" alt="Icon Favoritos">
+                </div>
+            </div>
+            
+        </div>
+    </header>
+
+    <div class="container">
+        <div id="media-container" class="media-container">
+            <a id="injectButton" class="button-red" style="margin: 15px auto 5px auto;">
+                <div id="inject" class="text-white"></div>
+            </a>
+            <div id="media" class="media"></div>
+        </div>
+        <div class="details" >
+            <a href="#" class="title text-black bold">LA REDOUTE INTERIEURS</a>
+            <p class="title text-black" style="font-size: 30px;">
+                Secretária vintage com compartimento duplo Dalqui
+            </p>
+            <div class="buy-container"style="display: flex;">
+                <div style="display: flex;flex-direction: column;margin: auto;">
+                    <p class="price-black">1119.67 €</p>   
+                    <p class="price-grey"><span class="lined">1349.00 €</span>-17%</p>                
+                </div>
+                
+                <div style="display: flex;flex-direction: row; margin: auto;">
+                    <a id="addCart" class="button-red-active" href="#">
+                        <div class="text-white">ADICIONAR AO CARRINHO</div>
+                    </a>
+                    <label for="fav-check">
+                        <img id=fav-img class="icon-40" style="margin: auto;" src='./src/icons/favIcon.png' alt="Icon Favoritos">  
+                    </label> 
+                    <input id="fav-check" type="checkbox" style="display: none;">
+                </div>
+            
+            </div>
+            <div class="desc-option-container">
+                <div style="display: flex;">
+                    <div class="dropdown text-red material-dropdown" style="margin-left:-3%;">
+                        <div class="dropbtn">
+                            <span class="label">Material:</span>
+                            <span id="inject-material">Nogueira</span>
+                        </div>
+                        <div class="dropdown-content" style="margin-left: 260px;">
+                            <a id="material1">Nogueira</a>
+                            <a id="material2">Imbuia</a>
+                        </div>
+                    </div>
+                    <div class="dropbtn text-red size-container" style="margin-left: 0.3%; width: fit-content;">
+                        <span class="label">Tamanho : </span>
+                        <span class="value">Único</span>
+                    </div>
+                </div>
+                <div class="quantitybtn text-red" style="margin-left: 0.3%;">
+                    <p class="text-quantity">Quantidade:&nbsp;</p>
+                    <div id='myform'  class='quantity' >
+                        <button type="button" class='qtyminus minus' onclick="decreaseQuantity(this)">-</button>
+                        <input type='text' name='quantity' value='1' class='qty' pattern="[0-9]+"
+                            title="Please enter a valid integer" required>
+                        <button type="button" class='qtyplus plus' onclick="increaseQuantity(this)">+</button>
+                    </div>
+                </div>
+            </div>
+            <div class="description-container">
+                <div class="description">
+                    <div class="sizes-title text-black">
+                        <b>Descrição:</b>
+                    </div>
+    
+                    <div class="sizes text-black" style="padding-left: 20px;">
+                        Largura: 145 cm <br>
+                        Altura: 76 cm <br>
+                        Profundidade: 70 cm <br>
+                        Altura dos pés: 22,7 cm <br>
+                        Peso: 60 kg
+                    </div>
+                    <button onclick="openOverlay()" class="sizes desc-more text-black" style="font-size: 15px;font-weight: 700;">Ver Mais</button>
+                </div>
+                <img class="entrega-plus" src="./src/images/entregaPlus.png" width="350" height="116" alt="EntregaPlus">
+            </div>    
+        </div>
+        <div id="overlay">
+            <div id="box" style="display: flex; align-items: center;">
+                <button onclick="closeOverlay()" style="position: absolute; top: 1.27%; right: 1.27%; border: none;"
+                    class="button-red-active text-white">Close</button>
+                <div id="text">
+                    <p>
+                        <span class="strong">Ref 1179832 / GJP439</span>
+                    </p>
+                    <p>
+                        É através de uma combinação harmoniosa de um folheado em nogueira, de um rotim delicado e de
+                        linhas simples que o Dalqui evoca um estilo vintage. Uma criação La Redoute Intérieurs.
+                    </p>
+                    <p>
+                        <span class="strong">Descrição:</span>
+                    </p>
+                    <ul>
+                        <li>Em nogueira maciça e MDF folha de nogueira, acabamento com verniz PU e NC</li>
+                        <li>2 portas + 2 gavetas</li>
+                        <li>Portas em rotim entrançado</li>
+                        <li>Abertura da porta com sistema push pull e dobradiças soft closing para um fecho suave
+                        </li>
+                    </ul>
+                    <p>
+                        <span class="strong">Dimensões:</span>
+                    </p>
+                    <p>
+                        <span class="strong">Totais</span>
+                    </p>
+                    <ul>
+                        <li>Largura: 145 cm</li>
+                        <li>Altura: 76 cm</li>
+                        <li>Profundidade: 70 cm</li>
+                        <li>Altura dos pés: 22,7 cm</li>
+                        <li>Peso: 60 kg</li>
+                    </ul>
+                    <p>
+                        <span class="strong">Úteis</span>
+                    </p>
+                    <ul>
+                        <li>Gaveta: larg. 33 x alt. 6,5 x prof. 58 cm</li>
+                        <li>Nicho da porta: larg. 36 x alt. 35 x prof. 61 cm</li>
+                    </ul>
+                    <p>
+                        <span class="strong">Entrega</span>
+                    </p>
+                    <p>
+                        Este artigo é entregue pré-montado. Este artigo será entregue em sua casa.
+                    </p>
+                    <p>
+                        <span class="strong">Atenção!</span> Verifique se as aberturas (portas, escadas, elevadores)
+                        permitem a passagem da embalagem no ato da entrega.
+                    </p>
+                    <p>
+                        <span class="strong">Dimensões e peso das embalagens</span>
+                    </p>
+                    <ul>
+                        <li>Comp. 89 x alt. 81 x prof. 74,5 cm. 44 kg</li>
+                        <li>Comp. 151 x alt. 10,5 x prof. 78 cm. 25 Kg</li>
+                    </ul>
+                </div>
+                <div id="image" style="margin-left: auto;">
+                    <img src="./src/images/desk-7.jpg" alt="Descrição da imagem">
+                </div>
+            </div>
+        </div>            
+    </div>
+
+    <script async src="/node_modules/unpkg.com_es-module-shims@1.8.0_dist_es-module-shims.js"></script>
+    <script type="importmap">
+    {
+      "imports": {
+        "three": "/node_modules/three/build/three.module.js",
+        "three/addons/": "/node_modules/three/examples/jsm/"
+      }
+    }
+    </script>
+
+    <script type="module" src="./main.js"></script>
+
+    <script>
+        const checkbox = document.getElementById('fav-check');
+        const img = document.getElementById('fav-img');
+      
+        checkbox.addEventListener(
+            'change', 
+            function() {
+                if (checkbox.checked) {
+                    img.src = './src/icons/favIconfull.png';
+                } else {
+                    img.src = './src/icons/favIcon.png';
+                }
+            }
+        );
+        
+        function increaseQuantity(button) {
+            var input = button.previousElementSibling;
+            var val = parseInt(input.value);
+            input.value = val + 1;
+        }
+    
+        function decreaseQuantity(button) {
+            var input = button.nextElementSibling;
+            var val = parseInt(input.value);
+            if (val > 1) {
+                input.value = val - 1;
+            }
+        }
+
+        function openOverlay() {
+            document.getElementById("overlay").style.display = "block";
+        }
+
+        function closeOverlay() {
+            document.getElementById("overlay").style.display = "none";
+        }
+  </script>
+      </script>
+</body>
+
+</html>
